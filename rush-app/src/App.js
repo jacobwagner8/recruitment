@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import Home from './components/Home/Home';
-import SignIn from './components/SignIn/SignIn';
+import Home from './components/Home';
+import SignIn from './components/SignIn';
+import Rushees from './components/Rushees';
+import Rushee from './components/Rushee';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -12,9 +14,8 @@ function App() {
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/signin' component={SignIn} />
-        {/* <Route path='/team' component={Teams} />
-        <Route path='/blogs' component={Blogs} />
-        <Route path='/sign-up' component={SignUp} /> */}
+        <Route path='/rushees' component={Rushees} />  
+        <Route path='/rushee' exact component={Rushee} /> 
       </Switch>
     </Router>
   );
